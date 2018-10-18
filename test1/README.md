@@ -26,7 +26,7 @@
 ![详情截图](https://github.com/15882504801/Oracle/blob/master/test1/详情1.jpg)
 <br>
 查询二
-br>
+<br>
 ![详情截图](https://github.com/15882504801/Oracle/blob/master/test1/详情2.jpg)
 <br>
 查询一的步骤数明显比查询二的步骤数多
