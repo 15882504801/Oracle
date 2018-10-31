@@ -14,8 +14,7 @@ User altered.
 SQL> GRANT wangyu_res_view TO wangyu;
 Grant succeeded.
 SQL> exit
-```
-> 语句“ALTER USER new_user QUOTA 50M ON users;”是指授权new_user用户访问users表空间，空间限额是50M。
+``
 <br>
 ![第一步截图](https://github.com/15882504801/Oracle/blob/master/test2/第一步.jpg)
 <br>
