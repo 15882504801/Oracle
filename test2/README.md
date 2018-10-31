@@ -14,7 +14,7 @@ User altered.
 SQL> GRANT wangyu_res_view TO wangyu;
 Grant succeeded.
 SQL> exit
-``
+```
 <br>
 ![第一步截图](https://github.com/15882504801/Oracle/blob/master/test2/第一步.jpg)
 <br>
