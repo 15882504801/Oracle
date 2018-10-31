@@ -15,9 +15,9 @@ SQL> GRANT wangyu_res_view TO wangyu;
 Grant succeeded.
 SQL> exit
 ```
-<br>
+
 ![第一步截图](https://github.com/15882504801/Oracle/blob/master/test2/第一步.jpg)
-<br>
+
 - 第2步：新用户wangyu连接到pdborcl，创建表mytable和视图myview，插入数据，最后将myview的SELECT对象权限授予hr用户。
 
 ```sql
@@ -41,9 +41,9 @@ SQL> GRANT SELECT ON myview TO hr;
 Grant succeeded.
 SQL>exit
 ```
-<br>
+
 ![第二步截图](https://github.com/15882504801/Oracle/blob/master/test2/第二步.jpg)
-<br>
+
 - 第3步：用户hr连接到pdborcl，查询wangyu授予它的视图myview
 
 ```sql
