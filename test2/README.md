@@ -16,7 +16,9 @@ Grant succeeded.
 SQL> exit
 ```
 > 语句“ALTER USER new_user QUOTA 50M ON users;”是指授权new_user用户访问users表空间，空间限额是50M。
-
+<br>
+![第一步截图](https://github.com/15882504801/Oracle/blob/master/test2/第一步.jpg)
+<br>
 - 第2步：新用户wangyu连接到pdborcl，创建表mytable和视图myview，插入数据，最后将myview的SELECT对象权限授予hr用户。
 
 ```sql
@@ -40,7 +42,9 @@ SQL> GRANT SELECT ON myview TO hr;
 Grant succeeded.
 SQL>exit
 ```
-
+<br>
+![第二步截图](https://github.com/15882504801/Oracle/blob/master/test2/第二步.jpg)
+<br>
 - 第3步：用户hr连接到pdborcl，查询wangyu授予它的视图myview
 
 ```sql
@@ -52,4 +56,4 @@ zhang
 wang
 SQL> exit
 ```
-
+![第三步截图](https://github.com/15882504801/Oracle/blob/master/test2/第三步.jpg)
