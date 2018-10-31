@@ -56,3 +56,7 @@ wang
 SQL> exit
 ```
 ![第三步截图](https://github.com/15882504801/Oracle/blob/master/test2/第三步.jpg)
+
+查看数据库的使用情况
+
+![查看数据库的使用情况截图](https://github.com/15882504801/Oracle/blob/master/test2/查看数据库使用情况.jpg)
