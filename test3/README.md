@@ -3,7 +3,7 @@
 
 ![创建截图](https://github.com/15882504801/Oracle/blob/master/test3/分区.jpg)
 
-在主表orders和从表order_details之间建立引用分区 在study用户中创建两个表：orders（订单表）和order_details（订单详表），两个表通过列order_id建立主外键关联。orders表按范围分区进行存储，order_details使用引用分区进行存储。
+
 创建orders表的部分语句是：
 
 ```sql
@@ -44,7 +44,6 @@ TO_DATE(' 2017-01-01 00:00:00', 'SYYYY-MM-DD HH24:MI:SS',
 'NLS_CALENDAR=GREGORIAN')) 
 NOLOGGING 
 TABLESPACE USERS02 
-...
 );
 ```
 
@@ -69,15 +68,41 @@ PARTITION BY REFERENCE (order_details_fk1)
 (
 PARTITION PARTITION_BEFORE_2016 
 NOLOGGING 
-TABLESPACE USERS --必须指定表空间,否则会将分区存储在用户的默认表空间中
-...
+TABLESPACE USERS
+PCTFREE 10 
+INITRANS 1 
+STORAGE 
+( 
+ INITIAL 8388608 
+ NEXT 1048576 
+ MINEXTENTS 1 
+ MAXEXTENTS UNLIMITED 
+ BUFFER_POOL DEFAULT 
 ) 
 NOCOMPRESS NO INMEMORY, 
 PARTITION PARTITION_BEFORE_2017 
 NOLOGGING 
 TABLESPACE USERS02
-...
-) 
-NOCOMPRESS NO INMEMORY  
 );
+```
+之后，我使用了Oracle的循环语句插入了10000条模版数据。
+```
+declare
+  maxnumber constant int:=10000;
+  i int :=1;
+  
+begin
+
+  for i in 1..maxnumber loop
+  
+    insert into orders(order_id, customer_name, customer_tel, order_date, employee_id, discount, trade_receivable)
+    values(i, '1', '1', '1', '1', '1', '1');
+    
+    insert into order_details (id, order_id, product_id, product_num, product_price, order_details_fk1)
+    values(i, '1', '1', '1', '1', '1');
+    
+  end loop;
+  commit;
+  
+end; 
 ```
