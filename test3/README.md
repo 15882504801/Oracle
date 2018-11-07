@@ -1,4 +1,8 @@
 # Oracle
+首先创建了三个分区
+
+![创建截图](https://github.com/15882504801/Oracle/blob/master/test3/分区.jpg)
+
 在主表orders和从表order_details之间建立引用分区 在study用户中创建两个表：orders（订单表）和order_details（订单详表），两个表通过列order_id建立主外键关联。orders表按范围分区进行存储，order_details使用引用分区进行存储。
 创建orders表的部分语句是：
 
