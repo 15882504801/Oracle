@@ -35,8 +35,8 @@ create or replace PACKAGE BODY MyPack IS
 END MyPack;
 ```
 结果
-![截图](https://github.com/15882504801/Oracle/blob/master/test4/第一步.jpg)
+![截图](https://github.com/15882504801/Oracle/blob/master/test5/结果1.jpg)
 然后对里面的函数进行了测试
-![截图](https://github.com/15882504801/Oracle/blob/master/test2/第一步.jpg)
+![截图](https://github.com/15882504801/Oracle/blob/master/test5/O3.jpg)
 <br>
-![截图](https://github.com/15882504801/Oracle/blob/master/test2/第一步.jpg)
+![截图](https://github.com/15882504801/Oracle/blob/master/test5/O4.jpg)
